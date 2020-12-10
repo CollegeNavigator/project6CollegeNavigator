@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/project6CollegeNavigator/static/css/main.13896715.chunk.css",
-    "main.js": "/project6CollegeNavigator/static/js/main.3aa08ff7.chunk.js",
-    "main.js.map": "/project6CollegeNavigator/static/js/main.3aa08ff7.chunk.js.map",
+    "main.css": "/project6CollegeNavigator/static/css/main.4f9ccfa0.chunk.css",
+    "main.js": "/project6CollegeNavigator/static/js/main.02cafa04.chunk.js",
+    "main.js.map": "/project6CollegeNavigator/static/js/main.02cafa04.chunk.js.map",
     "runtime-main.js": "/project6CollegeNavigator/static/js/runtime-main.b6030744.js",
     "runtime-main.js.map": "/project6CollegeNavigator/static/js/runtime-main.b6030744.js.map",
     "static/js/2.7de6241f.chunk.js": "/project6CollegeNavigator/static/js/2.7de6241f.chunk.js",
@@ -10,14 +10,14 @@
     "static/js/3.bcd0e6af.chunk.js": "/project6CollegeNavigator/static/js/3.bcd0e6af.chunk.js",
     "static/js/3.bcd0e6af.chunk.js.map": "/project6CollegeNavigator/static/js/3.bcd0e6af.chunk.js.map",
     "index.html": "/project6CollegeNavigator/index.html",
-    "static/css/main.13896715.chunk.css.map": "/project6CollegeNavigator/static/css/main.13896715.chunk.css.map",
+    "static/css/main.4f9ccfa0.chunk.css.map": "/project6CollegeNavigator/static/css/main.4f9ccfa0.chunk.css.map",
     "static/js/2.7de6241f.chunk.js.LICENSE.txt": "/project6CollegeNavigator/static/js/2.7de6241f.chunk.js.LICENSE.txt",
     "static/media/App.css": "/project6CollegeNavigator/static/media/header.dacb15c2.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.b6030744.js",
     "static/js/2.7de6241f.chunk.js",
-    "static/css/main.13896715.chunk.css",
-    "static/js/main.3aa08ff7.chunk.js"
+    "static/css/main.4f9ccfa0.chunk.css",
+    "static/js/main.02cafa04.chunk.js"
   ]
 }
