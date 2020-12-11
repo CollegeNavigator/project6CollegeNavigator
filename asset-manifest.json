@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/project6CollegeNavigator/static/css/main.594d12b0.chunk.css",
-    "main.js": "/project6CollegeNavigator/static/js/main.cbccd691.chunk.js",
-    "main.js.map": "/project6CollegeNavigator/static/js/main.cbccd691.chunk.js.map",
+    "main.js": "/project6CollegeNavigator/static/js/main.1bc2c04f.chunk.js",
+    "main.js.map": "/project6CollegeNavigator/static/js/main.1bc2c04f.chunk.js.map",
     "runtime-main.js": "/project6CollegeNavigator/static/js/runtime-main.932dec33.js",
     "runtime-main.js.map": "/project6CollegeNavigator/static/js/runtime-main.932dec33.js.map",
     "static/js/2.711bca09.chunk.js": "/project6CollegeNavigator/static/js/2.711bca09.chunk.js",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.932dec33.js",
     "static/js/2.711bca09.chunk.js",
     "static/css/main.594d12b0.chunk.css",
-    "static/js/main.cbccd691.chunk.js"
+    "static/js/main.1bc2c04f.chunk.js"
   ]
 }
