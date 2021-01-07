@@ -2,8 +2,6 @@ import { Component } from 'react';
 import { NavLink, Redirect } from 'react-router-dom';
 import firebase from './Firebase'
 
-
-
 class Header extends Component{
 
     constructor() {
@@ -30,12 +28,13 @@ class Header extends Component{
                 newFavouriteArray.push(favouriteSchool);
             }
 
+            // This is to set a indicator of how many favourite schools are displayed in the navigation
             this.setState({
                 favouritesLength: newFavouriteArray.length - 1
             })
         })
     }
-
+    
     setRedirect = () => {
         this.setState({
             redirect:true
@@ -96,7 +95,9 @@ class Header extends Component{
                             <label htmlFor="tradeSchool">Trade School</label>
                         </div>
                     </div>
+                    {/* renderRedirect will check redirect if it is true and changes it to false*/}
                     {this.renderRedirect()}
+                    {/* when the user clicks find schools, redirect is updated to true and routes the user to the search results */}
                     <button onClick={this.setRedirect}>Find Schools!</button>
                     </div>
                 </form>

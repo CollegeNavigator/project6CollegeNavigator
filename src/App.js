@@ -49,17 +49,14 @@ class App extends Component {
   }).then((res) => {
     const dataArray = res.data.response.venues;
 
-
+// filter the data array for objects that only contain university, college in there name, and also have a address length that is larger then 2, to filter out objects that lack relevant data
     const filteredArray = dataArray.filter((object => {
-      return object.name.includes("University") || object.categories[0].name === "Community College" || object.categories[0].name === "Trade School" && object.location.formattedAddress.length > 2})
+      return (object.name.includes("University") || object.categories[0].name === "Community College" || object.categories[0].name === "Trade School") && object.location.formattedAddress.length > 2})
     );
-
-   
-    // this.props.schoolResults[0].location.formattedAddress
-    
 
     this.setState({
       schoolResults: filteredArray,
+      // if the axios call returns relevant data change isActive to true, to display school results
       isActive:true
     })
 
@@ -67,6 +64,7 @@ class App extends Component {
     this.setState({
       isActive:false
     })
+    // error message when no schools are found
     Swal.fire({
       title: "No schools found",
       text: "Please Try Another City and Province/Country",
@@ -75,14 +73,17 @@ class App extends Component {
     })
   })
 
+// Firebase data intiilization 
    const dbRef = firebase.database().ref();
    dbRef.on('value', (data) => {
+    //  firebase data object
      const firebaseDataObj = data.val();
+    //  this variable contains all of the new schools 
      const newSchoolObject = firebaseDataObj.NewSchools;
 
      let newSchoolArray = [];
      let userNewSchool;
-
+      
      for (let schoolId in newSchoolObject) {
        userNewSchool = newSchoolObject [schoolId];
        userNewSchool.id = schoolId;
@@ -90,6 +91,7 @@ class App extends Component {
        newSchoolArray.push(userNewSchool);
      }
 
+    // conditional statement that organizes  our schools based on their schooltype ID 
      let userSchoolType= '';
      if (this.state.schoolTypeId === '4bf58dd8d48988d1ae941735'){
        userSchoolType = 'University'
@@ -109,16 +111,18 @@ class App extends Component {
      })
      );
 
-
+    //  comparing user input to the search results
      this.setState({
        newSchool: filteredNewSchoolArray
      })
    })
+
+
    city = this.state.cityInput;
    country = this.state.countryInput;
  }
 
-
+// Form functions to update states user input
  handleSubmit = (e) => {
    e.preventDefault();
    this.getData();
@@ -162,6 +166,7 @@ class App extends Component {
         submitHandler={this.handleSubmit}
         />
         <div className="wrapper">
+          {/* When axios call get data, set state isActive true and display data, if there is an error, or no data is found isActive is false and no routing occurs, nothing is updated */}
         {this.state.isActive 
             ? <Route exact path="/project6CollegeNavigator" render={() => {
           return (
