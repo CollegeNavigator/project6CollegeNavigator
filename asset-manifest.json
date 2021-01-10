@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/project6CollegeNavigator/static/css/main.e33bda36.chunk.css",
-    "main.js": "/project6CollegeNavigator/static/js/main.4f1ff564.chunk.js",
-    "main.js.map": "/project6CollegeNavigator/static/js/main.4f1ff564.chunk.js.map",
-    "runtime-main.js": "/project6CollegeNavigator/static/js/runtime-main.932dec33.js",
-    "runtime-main.js.map": "/project6CollegeNavigator/static/js/runtime-main.932dec33.js.map",
-    "static/js/2.378916df.chunk.js": "/project6CollegeNavigator/static/js/2.378916df.chunk.js",
-    "static/js/2.378916df.chunk.js.map": "/project6CollegeNavigator/static/js/2.378916df.chunk.js.map",
-    "static/js/3.dcec8164.chunk.js": "/project6CollegeNavigator/static/js/3.dcec8164.chunk.js",
-    "static/js/3.dcec8164.chunk.js.map": "/project6CollegeNavigator/static/js/3.dcec8164.chunk.js.map",
+    "main.css": "/project6CollegeNavigator/static/css/main.48cb3ba0.chunk.css",
+    "main.js": "/project6CollegeNavigator/static/js/main.7aa3bc14.chunk.js",
+    "main.js.map": "/project6CollegeNavigator/static/js/main.7aa3bc14.chunk.js.map",
+    "runtime-main.js": "/project6CollegeNavigator/static/js/runtime-main.676dc144.js",
+    "runtime-main.js.map": "/project6CollegeNavigator/static/js/runtime-main.676dc144.js.map",
+    "static/js/2.a5eb1996.chunk.js": "/project6CollegeNavigator/static/js/2.a5eb1996.chunk.js",
+    "static/js/2.a5eb1996.chunk.js.map": "/project6CollegeNavigator/static/js/2.a5eb1996.chunk.js.map",
+    "static/js/3.302d33c1.chunk.js": "/project6CollegeNavigator/static/js/3.302d33c1.chunk.js",
+    "static/js/3.302d33c1.chunk.js.map": "/project6CollegeNavigator/static/js/3.302d33c1.chunk.js.map",
     "index.html": "/project6CollegeNavigator/index.html",
-    "static/css/main.e33bda36.chunk.css.map": "/project6CollegeNavigator/static/css/main.e33bda36.chunk.css.map",
-    "static/js/2.378916df.chunk.js.LICENSE.txt": "/project6CollegeNavigator/static/js/2.378916df.chunk.js.LICENSE.txt",
+    "static/css/main.48cb3ba0.chunk.css.map": "/project6CollegeNavigator/static/css/main.48cb3ba0.chunk.css.map",
+    "static/js/2.a5eb1996.chunk.js.LICENSE.txt": "/project6CollegeNavigator/static/js/2.a5eb1996.chunk.js.LICENSE.txt",
     "static/media/App.css": "/project6CollegeNavigator/static/media/pexels-johannes-plenio-1103970.b9a92a4f.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.932dec33.js",
-    "static/js/2.378916df.chunk.js",
-    "static/css/main.e33bda36.chunk.css",
-    "static/js/main.4f1ff564.chunk.js"
+    "static/js/runtime-main.676dc144.js",
+    "static/js/2.a5eb1996.chunk.js",
+    "static/css/main.48cb3ba0.chunk.css",
+    "static/js/main.7aa3bc14.chunk.js"
   ]
 }
