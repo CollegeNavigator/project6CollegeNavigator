@@ -11,6 +11,7 @@ import './App.css';
 import AddSchool from './AddSchool';
 import Favourites from './Favourites.js';
 import Footer from './Footer.js';
+import Login from './Auth/Login.js';
 
 
 let city = "";
@@ -205,8 +206,11 @@ class App extends Component {
          }/>  : null 
       } 
 
-        <Route path="/addSchool" component={AddSchool} /> 
-        <Route path="/favourites" component={Favourites} /> 
+        <Route path="/project6CollegeNavigator/addSchool" component={AddSchool} /> 
+        <Route path="/project6CollegeNavigator/favourites" component={Favourites} />
+
+        <Route path="/project6CollegeNavigator/login" component={Login} />  
+
         </div>
         <Footer />
       </Router>
