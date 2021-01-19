@@ -18,17 +18,20 @@ class Favourites extends Component {
 
         dbRef.on('value', (data) => {
             const firebaseDataObj = data.val();
-            const favouritesObject = firebaseDataObj.Favourites;
+            const favouritesObject = firebaseDataObj.Favourites[firebase.auth().currentUser.uid];
 
             let favouritesArray = [];
             let userFavourite;
+            console.log('in favs', favouritesObject)
 
             for (let schoolId in favouritesObject) {
+                
                 userFavourite = favouritesObject[schoolId];
                 userFavourite.id = schoolId; 
                 userFavourite.notes = this.state.schoolNotes
                 favouritesArray.push(userFavourite);
             }
+            console.log('a milli',favouritesArray)
 
             this.setState({
                 favourites: favouritesArray
@@ -45,6 +48,7 @@ class Favourites extends Component {
                <ul>
                {
                    this.state.favourites.map((school) => {
+                       console.log('showing map',school)
                        return(
                         <Fragment>
                             <Favourite 

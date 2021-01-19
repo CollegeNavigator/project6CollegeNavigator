@@ -175,46 +175,60 @@ class App extends Component {
     });
   }
 
+ componentDidMount() {    
+        // check if user sign in or singed out        
+        firebase.auth().onAuthStateChanged((user)=> {
+        if(user){
+           this.setState({ userSignedIn: true });
+           this.setState({ isGuest: firebase.auth().currentUser.isAnonymous });
+        }else{
+           this.setState({ userSignedIn: false });
+        }
+       
 
+        })
+      }
 
 
   render() {
-    return(
+    return (
       <Router>
-        
         <Header
-        schoolHandler={this.handleSchoolType}
-        radiusHandler={this.handleRadius}
-        handleCityInput={this.handleCityInput}
-        handleCountryInput={this.handleCountryInput}
-        submitHandler={this.handleSubmit}
+          schoolHandler={this.handleSchoolType}
+          radiusHandler={this.handleRadius}
+          handleCityInput={this.handleCityInput}
+          handleCountryInput={this.handleCountryInput}
+          submitHandler={this.handleSubmit}
         />
         <div className="wrapper">
-        {this.state.isActive 
-            ? <Route exact path="/searchResults" render={() => {
-          return (
-            <>
-            <SearchResults 
-              schoolResults = {this.state.schoolResults}
-              schoolsAdded = {this.state.newSchool}
-              userCityInput = {city}
-              userCountryInput = {country}
-              />
-            </>
-          )
-        }
-         }/>  : null 
-      } 
+          {this.state.isActive ? (
+            <Route
+              exact
+              path="/searchResults"
+              render={() => {
+                return (
+                  <>
+                    <SearchResults
+                      schoolResults={this.state.schoolResults}
+                      schoolsAdded={this.state.newSchool}
+                      userCityInput={city}
+                      userCountryInput={country}
+                    />
+                  </>
+                );
+              }}
+            />
+          ) : null}
 
-        <Route path="/project6CollegeNavigator/addSchool" component={AddSchool} /> 
-        <Route path="/project6CollegeNavigator/favourites" component={Favourites} />
+          <Route path="/addSchool" component={AddSchool} />
+          <Route path="/favourites" component={Favourites} />
 
-        <Route path="/project6CollegeNavigator/login" component={Login} />  
-
+          <Route path="/login" component={Login} />
+          {/* <Login/> */}
         </div>
-        <Footer />
+        {this.state.userSignedIn && !this.state.isGuest && <Footer />}
       </Router>
-    )
+    );
   }
 }
 

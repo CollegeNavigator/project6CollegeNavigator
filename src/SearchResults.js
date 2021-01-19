@@ -13,13 +13,15 @@ class SearchResults extends Component {
             savedSchool: {
                 schoolName: '',
                 schoolAddress: [],
-            }
+            },
+            userId:''
         }
 
         this.sectionRef = React.createRef();
     }
 
     componentDidMount() {
+         this.setState({ userId: firebase.auth().currentUser.uid });
         this.sectionRef.current.scrollIntoView();
     }
     
@@ -39,7 +41,8 @@ class SearchResults extends Component {
     }
 
     handleAddFav = (name, address) => {
-        const dbFavouritesRef = firebase.database().ref('Favourites')
+        
+        const dbFavouritesRef = firebase.database().ref('Favourites/'+this.state.userId)
         const favouriteSchool = {
             schoolName: name,
             schoolAddress: [...address],

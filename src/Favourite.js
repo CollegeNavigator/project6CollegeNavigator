@@ -7,12 +7,15 @@ class Favourite extends Component {
         super();
         this.state = {
             schoolNotes: '',
-            schoolId: ''
+            schoolId: '',
+            userId:''
         }
+
+        this.setState({userId:firebase.auth().currentUser.uid})
     }
 
     removeSchool = (schoolRef) => {
-        const dbFavouritesRef = firebase.database().ref('Favourites');
+        const dbFavouritesRef = firebase.database().ref('/Favourites/'+firebase.auth().currentUser.uid);
         dbFavouritesRef.child(schoolRef).remove();
         Swal.fire({
             title: "Institution Removed",
@@ -23,7 +26,7 @@ class Favourite extends Component {
     }
 
     handleAddNotes = (schoolId) => {
-        const dbFavouritesRef = firebase.database().ref('Favourites')
+        const dbFavouritesRef = firebase.database().ref('/Favourites/'+firebase.auth().currentUser.uid)
         dbFavouritesRef.child(schoolId).update({ schoolNotes: this.state.schoolNotes });
        this.setState({
            schoolNotes: ''

@@ -1,6 +1,6 @@
 import { Component, Fragment } from 'react';
-import { NavLink, Redirect, withRouter } from 'react-router-dom';
-import firebase from '../Firebase';
+// import { NavLink, Redirect, withRouter } from 'react-router-dom';
+// import firebase from '../Firebase';
 import SignUp from './SignUp.js';
 import SignIn from './SignIn.js'
 
@@ -35,14 +35,14 @@ class Login extends Component {
                 {this.state.currentComponent === SIGNIN &&
                     (
                         <SignIn
-                        displayCurrentComponent={() => this.showComponent(SIGNUP)}
+                            displayCurrentComponent={() => this.showComponent(SIGNUP)}
                         />
                     )
                 }
                 {this.state.currentComponent === SIGNUP &&
                     (
                         <SignUp
-                        displayCurrentComponent={() => this.showComponent(SIGNIN)}
+                            displayCurrentComponent={() => this.showComponent(SIGNIN)}
                         />
                     )
                 }
